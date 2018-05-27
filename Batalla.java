@@ -8,20 +8,21 @@ public class Batalla extends Personaje{
 		super(nombre, vida, rVida, atq1, atq2, atq3);
 		// TODO Auto-generated constructor stub
 		
-	}
+	}       
+        
 	public static int turno = (int)Math.floor(Math.random()*(1 - 0 + 1) + 0 );;
 
 	public static void batalla() {	 
 		
-		System.out.println("PLAYER 1: ["+Personaje.player1.nombre+"] VIDA: ["+Personaje.player1.vida+"] ___________PLAYER 2: ["+Personaje.player2.nombre+"] VIDA: ["+Personaje.player2.vida+"]" );
+		System.out.println( "PLAYER 1: ["+Personaje.player1.getNombre()+"] VIDA: ["+Personaje.player1.getVida()+"] ___________PLAYER 2: ["+Personaje.player2.getNombre()+"] VIDA: ["+Personaje.player2.getVida()+"]" );
 
 		if (turno == 0) {
-			System.out.println("Empieza Player 2: " + Personaje.player2.nombre);
+			System.out.println("Empieza Player 2: " + Personaje.player2.getNombre());
 		}else {
-			System.out.println("Empieza Player 1 " + Personaje.player1.nombre);
+			System.out.println("Empieza Player 1 " + Personaje.player1.getNombre());
 		}
 		
-		while (Personaje.player1.vida > 0 && Personaje.player2.vida > 0) {			
+		while (Personaje.player1.getVida() > 0 && Personaje.player2.getVida() > 0) {			
 		
 		if (turno == 0) {
 			
@@ -35,12 +36,12 @@ public class Batalla extends Personaje{
 					
 		} 			
 		
-		if (Personaje.player1.vida <= 0) {
+		if (Personaje.player1.getVida() <= 0) {
 			
 			System.out.println("\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 					+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 					+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
-					+ ":::::::::::::::EL GANADOR ES[" + Personaje.player2.nombre + "]:::CON UNA VIDA DE :["+ Personaje.player2.vida + "]::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
+					+ ":::::::::::::::EL GANADOR ES[" + Personaje.player2.getNombre() + "]:::CON UNA VIDA DE :["+ Personaje.player2.getVida() + "]::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 							+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 							+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 							+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");	
@@ -50,7 +51,7 @@ public class Batalla extends Personaje{
 			System.out.println("\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 					+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 					+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
-					+ "::::::::::::::::EL GANADOR ES[" + Personaje.player1.nombre + "]:::CON UNA VIDA DE :["+ Personaje.player1.vida + "]::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
+					+ "::::::::::::::::EL GANADOR ES[" + Personaje.player1.getNombre() + "]:::CON UNA VIDA DE :["+ Personaje.player1.getVida() + "]::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 							+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 							+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"
 							+ "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n");	
@@ -65,7 +66,7 @@ public class Batalla extends Personaje{
 		do {
 			
 			
-			System.out.println(Personaje.player2.nombre + " Elije entre: \n");		
+			System.out.println(Personaje.player2.getNombre() + " Elije entre: \n");		
 			
 			System.out.println("1. Atacar");		
 			System.out.println("2. Recuperar Vida");			
@@ -82,10 +83,10 @@ public class Batalla extends Personaje{
 					Atacar0();
 					break;	
 				case 2:
-					recVida();
+					recVida2();
 					break;						
 				default:						
-					System.out.println("\n \n ....¡¡Selecciona una opción valida 3!!....\n \n");						
+					System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 3!!....\n \n");						
 					break;
 		
 			}
@@ -101,7 +102,7 @@ public class Batalla extends Personaje{
 		int exit = 0;
 		do {
 			
-			System.out.println(Personaje.player1.nombre + " Elije entre: \n");		
+			System.out.println(Personaje.player1.getNombre() + " Elije entre: \n");		
 			
 			System.out.println("1. Atacar");		
 			System.out.println("2. Recuperar Vida");		
@@ -118,10 +119,10 @@ public class Batalla extends Personaje{
 					Atacar1();
 					break;	
 				case 2:
-					recVida();
+					recVida1();
 					break;						
 				default:						
-					System.out.println("\n \n ....¡¡Selecciona una opción valida 3!!....\n \n");						
+					System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 3!!....\n \n");						
 					break;		
 			}
 		}while(exit != 0);	
@@ -149,25 +150,25 @@ public class Batalla extends Personaje{
 					exit = 0;
 					break;					
 				case 1:	
-					Personaje.player2.atq1 = (int)Math.floor(Math.random()*(45 - 40 + 1) + 40 );  //Ataque entre 40 y 45 puntos
-					Personaje.player1.vida = Personaje.player1.vida - Personaje.player2.atq1;
-					System.out.println( Personaje.player2.nombre + " :: ATAQUE BASICO 1 :: " + Personaje.player2.atq1 + " ptos. A " + Personaje.player1.nombre + " LE QUEDAN [" + Personaje.player1.vida + "] PUNTOS DE VIDA \n");
+					Personaje.player2.setAtq1((int)Math.floor(Math.random()*(45 - 40 + 1) + 40 )); //Ataque entre 40 y 45 puntos
+					Personaje.player1.setVida(Personaje.player1.getVida() - Personaje.player2.getAtq1()); 
+					System.out.println( Personaje.player2.getNombre() + " :: ATAQUE BASICO 1 :: " + Personaje.player2.getAtq1() + " ptos. A " + Personaje.player1.getNombre() + " LE QUEDAN [" + Personaje.player1.getVida() + "] PUNTOS DE VIDA \n");
 					turno=1;
 					break;	
 				case 2:
-					Personaje.player2.atq2 = (int)Math.floor(Math.random()*(55 - 46 + 1) + 46 ); //Ataque entre 46 y 55 puntos
-					Personaje.player1.vida = Personaje.player1.vida - Personaje.player2.atq2;
-					System.out.println( Personaje.player2.nombre + " :: ATAQUE BASICO 2 :: " + Personaje.player2.atq2 + " ptos. A " + Personaje.player1.nombre + " LE QUEDAN [" + Personaje.player1.vida + "] PUNTOS DE VIDA \n");
+					Personaje.player2.setAtq2((int)Math.floor(Math.random()*(55 - 45 + 1) + 45 )); //Ataque entre 40 y 45 puntos
+					Personaje.player1.setVida(Personaje.player1.getVida() - Personaje.player2.getAtq2()); 
+					System.out.println( Personaje.player2.getNombre() + " :: ATAQUE BASICO 2 :: " + Personaje.player2.getAtq2() + " ptos. A " + Personaje.player1.getNombre() + " LE QUEDAN [" + Personaje.player1.getVida() + "] PUNTOS DE VIDA \n");
 					turno=1;
 					break;		
 				case 3:
-					Personaje.player2.atq3 = (int)Math.floor(Math.random()*(80 - 65 + 1) + 65 ); //Ataque Super entre 65 y 80 puntos
-					Personaje.player1.vida = Personaje.player1.vida - Personaje.player2.atq3;
-					System.out.println( Personaje.player2.nombre + " :: ATAQUE BASICO 3 :: " + Personaje.player2.atq3 + " ptos. A " + Personaje.player1.nombre + " LE QUEDAN [" + Personaje.player1.vida + "] PUNTOS DE VIDA \n");
+					Personaje.player2.setAtq3((int)Math.floor(Math.random()*(75 - 55 + 1) + 55 )); //Ataque entre 40 y 45 puntos
+					Personaje.player1.setVida(Personaje.player1.getVida() - Personaje.player2.getAtq3()); 
+					System.out.println( Personaje.player2.getNombre() + " :: ATAQUE BASICO 1 :: " + Personaje.player2.getAtq3() + " ptos. A " + Personaje.player1.getNombre() + " LE QUEDAN [" + Personaje.player1.getVida() + "] PUNTOS DE VIDA \n");
 					turno=1;
 					break;
 				default:						
-					System.out.println("\n \n ....¡¡Selecciona una opción valida 3!!....\n \n");						
+					System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 3!!....\n \n");						
 					break;
 				}
 
@@ -194,28 +195,25 @@ public class Batalla extends Personaje{
 					exit = 0;
 					break;					
 				case 1:	
-					Personaje.player1.atq1 = (int)Math.floor(Math.random()*(45 - 40 + 1) + 40 );  //Ataque entre 40 y 45 puntos
-					Personaje.player2.vida = Personaje.player2.vida - Personaje.player1.atq1;
-					System.out.println( Personaje.player1.nombre + " :: ATAQUE BASICO 1 :: " + Personaje.player1.atq1 + " ptos. A " + Personaje.player2.nombre + " LE QUEDAN [" + Personaje.player2.vida + "] PUNTOS DE VIDA \n");
-
+					Personaje.player1.setAtq1((int)Math.floor(Math.random()*(45 - 40 + 1) + 40 )); //Ataque entre 40 y 45 puntos
+					Personaje.player2.setVida(Personaje.player2.getVida() - Personaje.player1.getAtq1()); 
+					System.out.println( Personaje.player1.getNombre() + " :: ATAQUE BASICO 1 :: " + Personaje.player1.getAtq1() + " ptos. A " + Personaje.player2.getNombre() + " LE QUEDAN [" + Personaje.player2.getVida() + "] PUNTOS DE VIDA \n");
 					turno=0;
 					break;	
 				case 2:
-					Personaje.player1.atq2 = (int)Math.floor(Math.random()*(55 - 46 + 1) + 46 ); //Ataque entre 46 y 55 puntos
-					Personaje.player2.vida = Personaje.player2.vida - Personaje.player1.atq2;
-					System.out.println( Personaje.player1.nombre + " :: ATAQUE BASICO 2 :: " + Personaje.player1.atq2 + " ptos. A " + Personaje.player2.nombre + " LE QUEDAN [" + Personaje.player2.vida + "] PUNTOS DE VIDA \n");
-
+					Personaje.player1.setAtq2((int)Math.floor(Math.random()*(55 - 45 + 1) + 45 )); //Ataque entre 40 y 45 puntos
+					Personaje.player2.setVida(Personaje.player2.getVida() - Personaje.player1.getAtq2()); 
+					System.out.println( Personaje.player1.getNombre() + " :: ATAQUE BASICO 1 :: " + Personaje.player1.getAtq2() + " ptos. A " + Personaje.player2.getNombre() + " LE QUEDAN [" + Personaje.player2.getVida() + "] PUNTOS DE VIDA \n");
 					turno=0;
 					break;		
 				case 3:
-					Personaje.player1.atq3 = (int)Math.floor(Math.random()*(80 - 65 + 1) + 65 ); //Ataque Super entre 65 y 80 puntos
-					Personaje.player2.vida = Personaje.player2.vida - player1.atq3;
-					System.out.println( Personaje.player1.nombre + " :: ATAQUE BASICO 3 :: " + Personaje.player1.atq3 + " ptos. A " + Personaje.player2.nombre + " LE QUEDAN [" + Personaje.player2.vida + "] PUNTOS DE VIDA \n");
-
+					Personaje.player1.setAtq3((int)Math.floor(Math.random()*(75 - 55 + 1) + 55 )); //Ataque entre 40 y 45 puntos
+					Personaje.player2.setVida(Personaje.player2.getVida() - Personaje.player1.getAtq3()); 
+					System.out.println( Personaje.player1.getNombre() + " :: ATAQUE BASICO 1 :: " + Personaje.player1.getAtq3() + " ptos. A " + Personaje.player2.getNombre() + " LE QUEDAN [" + Personaje.player2.getVida() + "] PUNTOS DE VIDA \n");
 					turno=0;
 					break;
 				default:						
-					System.out.println("\n \n ....¡¡Selecciona una opción valida 3!!....\n \n");						
+					System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 3!!....\n \n");						
 					break;
 				}
 
@@ -223,9 +221,13 @@ public class Batalla extends Personaje{
 	}
 
 	
-	public static void recVida() {
+	public static void recVida1() {
+            
+            
 		
 	}
+        
+        public static void recVida2(){
+            
+        }
 }
-		
-	
