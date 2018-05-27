@@ -12,8 +12,8 @@ public class main {
 		// TODO Auto-generated method stub			
 
         
-		//Menu.menu(); //Llama al metodo menu de la clase Menu "que es para probar"
-		menu();		//Llama al metodo menu(); dentro de la clase main.
+		Menu.menu(); // Hay que llamar al metodo desde esta clase.
+		//menu();		//Llama al metodo menu(); dentro de la clase main.
 			
 	}			
 		//Menu del juego
@@ -43,7 +43,7 @@ public class main {
 						break;				
 					case 2:Batalla.batalla();	//Empieza la pelea
 					default:						
-						System.out.println("\n \n ....¡¡Selecciona una opción valida 1!!....\n \n");		
+						System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 1!!....\n \n");		
 						menu();
 						break;
 				}				
@@ -77,7 +77,7 @@ public class main {
 					case 3:
 						menu();	//Regresa atras
 					default:						
-						System.out.println("\n \n ....¡¡Selecciona una opción valida 2!!....\n \n");						
+						System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 2!!....\n \n");						
 						break;
 				}				
 			}while(exit != 0);			
@@ -121,7 +121,7 @@ public class main {
 						seleccionDePersonaje();
 						break;
 					default:						
-						System.out.println("\n \n ....¡¡Selecciona una opción valida 3!!....\n \n");						
+						System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 3!!....\n \n");						
 						break;
 				}		
 				
@@ -162,7 +162,7 @@ public class main {
 						seleccionDePersonaje();
 						break;
 					default:						
-						System.out.println("\n \n ....¡¡Selecciona una opción valida 4!!....\n \n");						
+						System.out.println("\n \n ....Â¡Â¡Selecciona una opciÃ³n valida 4!!....\n \n");						
 						break;
 				}				
 			}while(exit != 0);			
