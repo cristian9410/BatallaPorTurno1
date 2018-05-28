@@ -83,7 +83,7 @@ public class Batalla extends Personaje{
 					Atacar0();
 					break;	
 				case 2:
-					recVida2();
+					RecVida.recVida2();
 					break;						
 				default:						
 					System.out.println("\n \n ....¡¡Selecciona una opción valida 3!!....\n \n");						
@@ -119,7 +119,7 @@ public class Batalla extends Personaje{
 					Atacar1();
 					break;	
 				case 2:
-					recVida1();
+					RecVida.recVida1();
 					break;						
 				default:						
 					System.out.println("\n \n ....¡¡Selecciona una opción valida 3!!....\n \n");						
@@ -221,13 +221,5 @@ public class Batalla extends Personaje{
 	}
 
 	
-	public static void recVida1() {
-            
-            
-		
-	}
-        
-        public static void recVida2(){
-            
-        }
+	
 }
